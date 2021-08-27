@@ -1,0 +1,1448 @@
+#include<stdio.h>
+void halfPyramid(void)                                                           //1
+{
+    int i,j;
+    printf("\t\t*Half Pyramid Pattern*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=6;j++)
+        {
+            if(j<=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void invertedHalfPyramid(void)                                                  //2
+{
+    int i,j;
+    printf("\t\t*Inverted half pyramid pattern*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=6;j++)
+        {
+            if(j<=7-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowInvertedHalfPyramid(void)                                            //3
+{
+    int i,j;
+    printf("\t\t*Hollow inverted half pyramid pattern*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=6;j++)
+        {
+            if(i==1||j==1||j==7-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void fullPyramid(void)                                                          //4
+{
+    int i,j,k=1;
+    printf("\t\t*Full pyramid pattern*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=11;j++)
+        {
+            if(j>=7-i&&j<=i+5&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+}
+void invertedFullPyramid(void)                                                  //5
+{
+    int i,j,k=1;
+    printf("\t\t*Inverted full pyramid pattern *\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=11;j++)
+        {
+            if(j>=i&&j<=12-i&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+}
+void hollowFullPyramid(void)                                                    //6
+{
+    int i,j;
+    printf("\t\t*Hollow full pyramid pattern*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=11;j++)
+        {
+            if(i==6||j==7-i||j==i+5)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void halfPyramidOfNumbers(void)                                                 //7
+{
+    int i,j;
+    int k=1;
+    printf("\t\t*Half pyramid of numbers*\n\n ");
+    for(i=1;i<=5;i++)
+    {
+        k=1;
+        for(j=1;j<=5;j++)
+        {
+            if(j<=i)
+            printf("%d",k++);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void invertedHalfPyramidOfNumbers(void)                                         //8
+{
+    int i,j,k=1;
+    printf("\t\t*Inverted half pyramid of numbers*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        k=1;
+        for(j=1;j<=5;j++)
+        {
+            if(j<=6-i)
+            printf("%d",k++);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowHalfPyramidOfNumbers(void)                                           //9
+{
+    int i,j,k=1;
+    printf("\t\t*Hollow half pyramid of numbers*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        k=1;
+        for(j=1;j<=5;j++)
+        {
+            if(i==5)
+            printf("%d",k++);
+            if(j==1&&i!=1&&i!=5)
+            printf("%d",k);
+            if(j==i&&i!=5)
+            printf("%d",i);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void fullPyramidOfNumbers(void)                                                 //10
+{
+    int i,j,k=1;
+    printf("\t\t*Full pyramid of numbers*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        k=i;
+        for(j=1;j<=5;j++)
+        {
+            if(j>=6-i)
+            printf("%d",k++);
+            else
+            {
+            printf(" ");
+            }
+        }
+        k=k-1;
+        for(j=6;j<=9;j++)
+        {
+            if(j>5&&j<=i+4)
+            {
+                printf("%d",--k);
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowInvertedHalfPyramidOfNumbers(void)                                   //11
+{
+    int i,j;
+    printf("\t\t*Hollow inverted half pyramid of numbers*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(i==1&&j<5)
+            printf("%d",j);
+            if(j==1&&i>1&&i<5)
+            printf("%d",i);
+            if(j==6-i)
+            printf("5");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void pyramidOfNumbers(void)                                                     //12
+{
+    int i,j,k=1;
+    printf("\t\t*Pyramid of numbers*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=9;j++){
+        if(j<=5){
+        k=1;
+        for(j=1;j<=5;j++)
+        {
+            if(j>=6-i&&j<=i+4)
+            printf("%d",k++);
+            else
+            printf(" ");
+        }
+        }
+        else
+        {
+        k=i-1;
+        for(j=6;j<=9;j++)
+        {
+            if(j<=i+4)
+            printf("%d",k--);
+            else
+            printf(" ");
+        }
+        }
+        }
+        printf("\n");
+    }
+}
+void hollowDiamond(void)                                                        //13
+{
+    int i,j;
+    printf("\t\t*Hollow diamond*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j==6-i||j==i+4)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j==i-5||j==15-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void solidHalfDiamond(void)                                                     //14
+{
+    int i,j;
+    printf("\t\t*Solid half diamond*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j<=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=9;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j<=10-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void differentTypeOfDiamond(void)                                               //15
+{
+    int i,j,count=2;
+    printf("\t\t*Different type of diamond*\n\n");
+    for(i=1;i<=4;i++)
+    {
+        count++;
+        for(j=1;j<=4;j++)
+        {
+            if(j<=i)
+            printf("%d",count);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=5;i<=7;i++)
+    {
+        --count;
+        for(j=1;j<=4;j++)
+        {
+            if(j<=8-i)
+            printf("%d",count);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void pascalTriangle(void)                                                       //16
+{
+     int i,j,count=1;
+     printf("\t\t*Pascal's triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(j<=i)
+            printf("%d",count++);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void differentTypeOfPallindromePyramid(void)                                    //17
+{
+    int i,j,k=1;
+    printf("\t\t*Different type of pallindrome pyramid*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=15;j++)
+        {
+            if(j>=9-i&&j<=i+7&&k)
+            {
+                printf("%d",i);
+                k=0;
+            }
+            else
+            {
+                printf("*");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+}
+void solidDiamond(void)                                                         //18
+{
+    int i,j,k=1;
+    printf("\t\t*Solid diamond*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j>=6-i&&j<=i+4&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j>=i-5&&j<=15-i&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+}
+void butterflyPattern(void)                                                     //19
+{
+    int i,j;
+    printf("\t\t*Butterfly pattern*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            if(j<=i||j>=11-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            if(j<=11-i||j>=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void diagonalAndSidesOfRectangle(void)                                          //20
+{
+    int i,j;
+    printf("\t\t*Diagonal and sides of rectangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==1||j==1||i==7||j==7)
+            printf("*");
+            else if(j==i||j==8-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void diagonalAndSidesOfRhombus(void)                                            //21
+{
+    int i,j;
+    printf("\t\t*Diagonal and sides of rhombus*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(i==5||j==5)
+            printf("*");
+            else if(i>=2&&i<=4&&j>=2&&j<=8)
+            {
+                if(j==6-i||j==i+4)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i>=6&&i<=8&&j>=2&&j<=8)
+            {
+                if(j==i-4||j==14-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+            
+        }
+        printf("\n");
+    }
+}
+void rightArrow(void)                                                           //22
+{
+     int i,j;
+     printf("\t\t*Right arrow star pattern*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(i==5)
+            printf("*");
+            else if(i<=5)
+            {
+                if(j==i+4)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if (i>=6&&i<=9)
+            {
+                if(j==14-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void leftArrow(void)                                                            //23
+{
+     int i,j;
+     printf("\t\t*Left arrow star pattern*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(i==5)
+            printf("*");
+            else if(i<=4)
+            {
+                if(j==6-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i>=6&&i<=9)
+            {
+                if(j==i-4)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void solidRhombus(void)                                                         //24
+{
+    int i,j;
+    printf("\t\t*Solid rhombus*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=15;j++)
+        {
+            if(j>=10-i&&j<=16-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowRhombus(void)                                                        //25
+{
+    int i,j;
+    printf("\t\t*Hollow rhombus*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=8;j++)
+        {
+            if(i==1||i==5)
+            {
+                if(j>=6-i&&j<=9-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i>=2&&i<=4)
+            {
+                if(j==6-i||j==9-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void squareStarPattern(void)                                                    //26
+{
+    int i,j;
+    printf("\t\t*Square star pattern*\n\n");
+    for(i=1;i<=10;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+void hollowSquareStarWithDiagonal(void)                                         //27
+{
+     int i,j;
+     printf("\t\t*Hollow square star pattern*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==1||i==7||j==1||j==7)
+            printf("*");
+            else if(i>=2&&i<=6&&j>=2&&j<=6)
+            {
+                if(j==i||j==8-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void mirroredRhombus(void)                                                      //28
+{
+    int i,j;
+    printf("\t\t*Mirrored rhombus*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=15;j++)
+        {
+            if(j>=i&&j<=i+6)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void rightTriangle(void)                                                        //29
+{
+    int i,j;
+    printf("\t\t*Right triangle*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=6;j++)
+        {
+            if(j<=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void mirroredRightTriangle(void)                                                //30
+{
+    int i,j;
+    printf("\t\t*Mirrored right triangle*\n\n");
+    for(i=1;i<=6;i++)
+    {
+        for(j=1;j<=6;j++)
+        {
+            if(j>=7-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowRightTriangle(void)                                                  //31
+{
+    int i,j;
+    printf("\t\t*Hollow right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==7||j==1)
+            printf("*");
+            else if(i>=2&&i<=6&&j>=2&&j<=6)
+            {
+                if(j==i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowMirroredRightTriangle(void)                                          //32
+{
+    int i,j;
+    printf("\t\t*Hollow mirrored right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==7||j==7)
+            printf("*");
+            else if(i>=2&&i<=6&&j>=2&&j<=6)
+            {
+                if(j==8-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowInvertedMirroredRightTriangle(void)                                  //33
+{
+    int i,j;
+    printf("\t\t*Hollow inverted mirrored right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==1||j==7)
+            printf("*");
+            else if(i>=2&&i<=6&&j>=2&&j<=6)
+            {
+                if(j==i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowInvertedRightTriangle(void)                                          //34
+{
+    int i,j;
+    printf("\t\t*Hollow inverted right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==1||j==1)
+            printf("*");
+            else if(i>=2&&i<=6&&j>=2&&j<=6)
+            {
+                if(j==8-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void invertedRightTriangle(void)                                                //35
+{
+    int i,j;
+    printf("\t\t*Inverted right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(j<=8-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void invertedMirroredRightTriangle(void)                                        //36
+{
+    int i,j;
+    printf("\t\t*Inverted mirrored right triangle*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(j>=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowSquareStar(void)                                                     //37
+{
+    int i,j;
+    printf("\t\t*Hollow square star pattern*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==1||j==1||j==7||i==7)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void plusStar(void)                                                             //38
+{
+    int i,j;
+    printf("\t\t*Plus star*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(i==5||j==5)
+            printf("+");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowRightArrow(void)                                                     //39
+{
+    int i,j;
+    printf("\t\t*Hollow right arrow*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j>=i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j>=11-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void halfDiamondStarPattern(void)                                               //40
+{
+    int i,j,k=1;
+    printf("\t\t*Half diamond star pattern*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(i<=5)
+            {
+                if(j<=2*i-1)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i>=6)
+            {
+                if(j<=14-i-k)
+                {
+                printf("*");
+                k++;
+                }
+                else
+                {
+                printf(" ");
+                }
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void hollowLeftArrow(void)                                                      //41
+{
+    int i,j;
+    printf("\t\t*Hollow left arrow*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j<=6-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j<=i-5)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void xStar(void)                                                                //42
+{
+    int i,j;
+    printf("\t\t*X star pattern*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            if(j==i||j==11-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=10;j++)
+        {
+            if(j==i||j==11-i)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void swastik(void)                                                              //43
+{
+    int i,j;
+    printf("\t\t*Swastik pattern*\n\n");
+    for(i=1;i<=7;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(i==4||j==4)
+            printf("*");
+            else if(i<=3)
+            {
+                if(j==1||j==4)
+                printf("*");
+            
+                else if(i==1)
+                {
+                if(j>=5)
+                printf("*");
+                else
+                printf(" ");
+                }
+                else
+                printf(" ");
+            }
+            else if(i>=5)
+            {
+                if(j==4||j==7)
+                printf("*");
+                else if(i==7)
+                {
+                if(j<=3)
+                printf("*");
+                else
+                printf(" ");
+                }
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void sandglassPattern(void)                                                     //44
+{
+     int i,j,k=1;
+     printf("\t\t*Sandglass pattern*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j>=i&&j<=10-i&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+    for(i=6;i<=10;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if(j>=11-i&&j<=i-1&&k)
+            {
+                printf("*");
+                k=0;
+            }
+            else
+            {
+                printf(" ");
+                k=1;
+            }
+        }
+        printf("\n");
+    }
+}
+void crossWaveWithBracket(void)                                                 //45
+{
+     int i,j;
+     printf("\t\t*Cross wave with brackets*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=15;j++)
+        {
+            if(j<=5)
+            {
+                if(j==i||j==6-i)
+                printf("][");
+                else
+                printf(" ");
+            }
+            else if(j>=6&&j<=10)
+            {
+                if(j==i+5||j==11-i)
+                printf("][");
+                else
+                printf(" ");
+            }
+            else if(j>=11&&j<=15)
+            {
+                if(j==i+10||j==16-i)
+                printf("][");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void triangularWave(void)                                                       //46
+{
+    int i,j;
+    printf("\t\t*Triangular wave*\n\n");
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=19;j++)
+        {
+            if(j==5-i||j==i+3||j==11-i||j==i+9||j==17-i||j==i+15)
+            printf("*");
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void squareWave(void)                                                           //47
+{
+    int i,j;
+    printf("\t\t*Square wave*\n\n");
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=18;j++)
+        {
+            if(i==1)
+            {
+                if((j>=2&&j<=5)||(j>=8&&j<=11)||(j>=14&&j<=17))
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i==4)
+            {
+                if(j<=2||(j>=5&&j<=8)||(j>=11&&j<=14)||j>=17)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(i==2||i==3)
+            {
+                if(j==2||j==5||j==8||j==11||j==14||j==17)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void normalWave(void)                                                           //48
+{
+     int i,j;
+     printf("\t\t*Normal wave*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=18;j++)
+        {
+            if(i==1)
+            {
+                if(j==3||j==4||j==9||j==10||j==15||j==16)
+                printf("0");
+                else
+                printf(" ");
+            }
+            else if(i==5)
+            {
+                if(j==1||j==6||j==7||j==12||j==13||j==18)
+                printf("0");
+                else
+                printf(" ");
+            }
+            else if(i>=2&&i<=4)
+            {
+                if(j==2||j==5||j==8||j==11||j==14||j==17)
+                printf("0");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void crossWave(void)                                                            //49
+{
+    int i,j;
+    printf("\t\t*Cross wave*\n\n");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=15;j++)
+        {
+            if(j<=5)
+            {
+                if(j==i||j==6-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(j>=6&&j<=10)
+            {
+                if(j==i+5||j==11-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else if(j>=11&&j<=15)
+            {
+                if(j==i+10||j==16-i)
+                printf("*");
+                else
+                printf(" ");
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+void circle(void)                                                               //50
+{
+     int i,j,k,x,z;
+     printf("\t\t*Circle*\n\n");
+    for(i=1;i<=9;i++)
+    {
+        switch(i)
+        {
+            case 1:
+            case 9:
+            x=6;
+            z=2;
+            break;
+            case 2:
+            case 8:
+            x=8;
+            z=1;
+            break;
+            case 3:
+            case 7:
+            x=9;
+            z=1;
+            break;
+            default:
+            x=10;
+            z=0;
+            break;
+        }
+        for(j=1;j<=z;j++)
+        {
+            printf("  ");
+        }
+        for(k=1;k<=x;k++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+/////////////////
+void main()
+{
+    int n,m=1;
+    printf("**********\n");
+    printf("VARIOUS KIND OF PATTERNS\n");
+    printf("**********\n\n\n");
+    printf("Check this list for serial number of any pattern \n\n");
+    printf("1.Half Pyramid\n"
+            "2.Inverted half pyramid\n"
+            "3.Hollow inverted half pyramid\n"
+            "4.Full pyramid\n"
+            "5.Inverted full pyramid\n"
+            "6.Hollow full pyramid\n"
+            "7.Half pyramid of numbers\n"
+            "8.Inverted half pyrami of numbers\n"
+            "9.Hollow half pyramid of numbers\n"
+            "10.Full pyramid of numbers\n"
+            "11.Hollow inverted half pyramid of numbers\n"
+            "12.Pyramid of numbers\n"
+            "13.Hollow pyramid\n"
+            "14.Solid half diamond\n"
+            "15.Different type of diamond\n"
+            "16.Pascal's triangle\n"
+            "17.Different type of pallindrome pyramid\n"
+            "18.Solid diamond\n"
+            "19.Butterfly pattern\n"
+            "20.Diagonal and sides of rectangle\n"
+            "21.Diagonal and sides of rhombus\n"
+            "22.Right arrow\n"
+            "23.Left arrow\n"
+            "24.Solid rhombus\n"
+            "25.Hollow rhombus\n"
+            "26.Square star pattern\n"
+            "27.Hollow square star pattern with diagonal\n"
+            "28.Mirrored rhombus star pattern\n"
+            "29.Right triangle\n"
+            "30.Mirrored right triangle\n"
+            "31.Hollow right triangle\n"
+            "32.Hollow mirrored right triangle\n"
+            "33.Hollow inverted mirrored right triangle\n"
+            "34.Hollow inverted right triangle\n"
+            "35.Inverted right triangle\n"
+            "36.Inverted mirrored right triangle\n"
+            "37.Hollow square star pattern\n"
+            "38.Plus star pattern\n"
+            "39.Hollow right arrow \n"
+            "40.Half diamond star pattern\n"
+            "41.Hollow left arrow\n"
+            "42.X star pattern\n"
+            "43.Swastik pattern\n"
+            "44.Sandglass pattern\n"
+            "45.Cross wave with brackets\n"
+            "46.Triangular wave\n"
+            "47.Square wave\n"
+            "48.Normal wave \n"
+            "49.Cross wave \n"
+            "50.Circle\n\n\n");
+            printf("\tInstruction: 'press 1 for continue and 0 for exit'\n\n ");
+            
+    while(m==1)
+    {
+    printf("Now enter your choice : \n\n");
+    scanf("%d",&n);
+    printf("\n \n");
+    printf(" Your choice : %d \n\n\n",n);
+    
+    switch(n)
+    {
+        case 1:
+         halfPyramid();
+        break;
+        case 2:
+         invertedHalfPyramid();
+         
+        break;
+        case 3:
+        hollowInvertedHalfPyramid();
+        break;
+        case 4:
+        fullPyramid();
+        break;
+        case 5:
+        invertedFullPyramid();
+        break;
+        case 6:
+        hollowFullPyramid();
+        break;
+        case 7:
+        halfPyramidOfNumbers();
+        break;
+        case 8:
+        invertedHalfPyramidOfNumbers();
+        break;
+        case 9:
+        hollowHalfPyramidOfNumbers();
+        break;
+        case 10:
+        fullPyramidOfNumbers();
+        break;
+        case 11:
+        hollowInvertedHalfPyramidOfNumbers();
+        break;
+        case 12:
+        pyramidOfNumbers();
+        break;
+        case 13:
+        hollowDiamond();
+        break;
+        case 14:
+        solidHalfDiamond();
+        break;
+        case 15:
+        differentTypeOfDiamond();
+        break;
+        case 16:
+        pascalTriangle();
+        break;
+        case 17:
+        differentTypeOfPallindromePyramid();
+        break;
+        case 18:
+        solidDiamond();
+        break;
+        case 19:
+        butterflyPattern();
+        break;
+        case 20:
+        diagonalAndSidesOfRectangle();
+        break;
+        case 21:
+        diagonalAndSidesOfRhombus();
+        break;
+        case 22:
+        rightArrow();
+        break;
+        case 23:
+        leftArrow();
+        break;
+        case 24:
+        solidRhombus();
+        break;
+        case 25:
+        hollowRhombus();
+        break;
+        case 26:
+        squareStarPattern();
+        break;
+        case 27:
+        hollowSquareStarWithDiagonal();
+        break;
+        case 28:
+        mirroredRhombus();
+        break;
+        case 29:
+        rightTriangle();
+        break;
+        case 30:
+        mirroredRightTriangle();
+        break;
+        case 31:
+        hollowRightTriangle();
+        break;
+        case 32:
+        hollowMirroredRightTriangle();
+        break;
+        case 33:
+        hollowInvertedMirroredRightTriangle();
+        break;
+        case 34:
+        hollowInvertedRightTriangle();
+        break;
+        case 35:
+        invertedRightTriangle();
+        break;
+        case 36:
+        invertedMirroredRightTriangle();
+        break;
+        case 37:
+        hollowSquareStar();
+        break;
+        case 38:
+        plusStar();
+        break;
+        case 39:
+        hollowRightArrow();
+        break;
+        case 40:
+        halfDiamondStarPattern();
+        break;
+        case 41:
+        hollowLeftArrow();
+        break;
+        case 42:
+        xStar();
+        break;
+        case 43:
+        swastik();
+        break;
+        case 44:
+        sandglassPattern();
+        break;
+        case 45:
+        crossWaveWithBracket();
+        break;
+        case 46:
+        triangularWave();
+        break;
+        case 47:
+        squareWave();
+        break;
+        case 48:
+        normalWave();
+        break;
+        case 49:
+        crossWave();
+        break;
+        case 50:
+        circle();
+        break;
+        default:
+        printf("Invalid choice\n");
+        break;
+    }
+    printf("\nDo you want to continue(1/0) ?\n");
+    scanf("%d",&m);
+    }
+}
